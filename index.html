@@ -62,23 +62,5 @@
             document.body.classList.add('loaded');
         });
     </script>
-    <script>
-    window.addEventListener('load', () => {
-        // Parse query parameters
-        const urlParams = new URLSearchParams(window.location.search);
-        const source = urlParams.get('source'); // Extract the 'source' query parameter
-
-        // Check if the source matches the allowed value
-        if (source !== 'linkvertise') {
-            // If not, display an access denied message
-            document.body.innerHTML = `
-                <div style="background: black; color: white; height: 100vh; display: flex; align-items: center; justify-content: center; flex-direction: column; text-align: center;">
-                    <h1>Access Denied</h1>
-                    <p>You must visit this page through an authorized link. Please go back and try again.</p>
-                </div>
-            `;
-        }
-    });
-</script>
 </body>
 </html>
